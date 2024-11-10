@@ -1,0 +1,154 @@
+:root {
+  --primaryClr: rgb(246, 86, 113);
+  --secondaryClr: lightpink;
+  --trClr: rgb(235, 142, 167);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.2 rem;
+}
+.wrapper {
+  background: linear-gradient(var(--primaryClr), var(--secondaryClr));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  background: rgb(162, 97, 97);
+  width: 400px;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px white;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "dis dis dis dis"
+    "ac c per divide "
+    "b7 b8 b9 astrix"
+    "b4 b5 b6 minus"
+    "b1 b2 b3 plus"
+    "b0 point equalto equalto";
+}
+
+.display {
+  grid-area: dis;
+  background: var(--secondaryClr);
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  font-weight: bolder;
+}
+.calculator .btn {
+  background: var(--trClr);
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.calculator .btn:hover {
+  cursor: pointer;
+  background: var(--secondaryClr);
+}
+
+.btn-ac {
+  grid-area: ac;
+}
+.btn-c {
+  grid-area: c;
+}
+.btn-per {
+  grid-area: per;
+}
+.btn-divide {
+  grid-area: divide;
+}
+
+.btn-7 {
+  grid-area: b7;
+}
+
+.btn-8 {
+  grid-area: b8;
+}
+
+.btn-9 {
+  grid-area: b9;
+}
+
+.btn-astrix {
+  grid-area: astrix;
+}
+
+.btn-4 {
+  grid-area: b4;
+}
+
+.btn-5 {
+  grid-area: b5;
+}
+
+.btn-6 {
+  grid-area: b6;
+}
+
+.btn-minus {
+  grid-area: minus;
+}
+
+.btn-1 {
+  grid-area: b1;
+}
+
+.btn-2 {
+  grid-area: b2;
+}
+
+.btn-3 {
+  grid-area: b3;
+}
+
+.btn-plus {
+  grid-area: plus;
+}
+
+.btn-0 {
+  grid-area: b0;
+}
+
+.btn-point {
+  grid-area: point;
+}
+
+.btn-equalto {
+  grid-area: equalto;
+}
+.prank {
+  animation: shake;
+  background: red;
+  color: white;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
